@@ -1,0 +1,28 @@
+plugins {
+    id "idea"
+    id "java"
+    id "io.freefair.lombok" version "${pluginVersionLombok}"
+    id "io.spring.dependency-management" version "${pluginVersionSpringDepMan}"
+}
+
+repositories {
+    mavenCentral()
+}
+
+idea {
+    project {
+        languageLevel = javaVersion
+    }
+    module {
+        downloadJavadoc = false
+        downloadSources = true
+    }
+}
+
+dependencyManagement {
+    dependencies {
+        imports {
+            mavenBom "org.springframework.boot:spring-boot-dependencies:${springBomVersion}"
+        }
+    }
+}
