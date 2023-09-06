@@ -1,3 +1,4 @@
 rootProject.name = 'LeetCode'
 include 'ColumnSort'
 include 'AppleCollect'
+include 'IceCream'
