@@ -27,7 +27,7 @@ https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
 
 ---
 
-![img.png](readMeImages/imgTree1.png)
+![](readMeImages/imgTree1.png)
 
 Ввод:
 ```
@@ -42,7 +42,7 @@ hasApple = [false,false,true,false,true,true,false]
 
 ---
 
-![img.png](readMeImages/imgTree2.png)
+![](readMeImages/imgTree2.png)
 
 
 Ввод:
