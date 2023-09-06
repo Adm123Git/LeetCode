@@ -1,4 +1,4 @@
-# Мороженое
+# Строка из дерева
 
 https://leetcode.com/problems/construct-string-from-binary-tree/
 
