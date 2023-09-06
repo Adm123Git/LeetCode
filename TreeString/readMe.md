@@ -20,7 +20,7 @@ https://leetcode.com/problems/construct-string-from-binary-tree/
 
 ---
 
-![](readMeImages\imgTree1.jpg)
+![](readMeImages/imgTree1.jpg)
 
 Ввод
 ```
@@ -38,7 +38,7 @@ root = [1,2,3,4]
 
 ---
 
-![](readMeImages\imgTree2.jpg)
+![](readMeImages/imgTree2.jpg)
 
 Ввод
 ```
