@@ -2,7 +2,8 @@
 
 https://leetcode.com/problems/delete-columns-to-make-sorted/
 
-### Сложность: Лёгкая
+### Сложность
+Лёгкая
 
 ### Условие задачи
 

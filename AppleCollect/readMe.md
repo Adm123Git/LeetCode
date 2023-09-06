@@ -2,7 +2,8 @@
 
 https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
 
-### Сложность: Средняя
+### Сложность
+Средняя
 
 ### Условие задачи
 
