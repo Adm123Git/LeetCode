@@ -21,8 +21,10 @@ https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
 Кроме того, существует логический массив hasApple, где hasApple[i] = true означает, что в вершине i есть яблоко;
 в противном случае в ней нет никакого яблока.
 
-<hr>
-Примеры:
+
+### Примеры
+
+---
 
 ![img.png](imgTree1.png)
 
