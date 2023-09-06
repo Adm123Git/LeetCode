@@ -28,7 +28,8 @@ public class Main {
 
     public static void main(String[] args) {
         InputData input = input1;
-        System.out.println(calculateStepCount(0, -1, getAdjacency(input), input));
+        int stepCount = calculateStepCount(0, -1, getAdjacency(input), input);
+        System.out.println("Минимальное время сбора яблок - " + stepCount * input.getTimeToStep());
     }
 
     /**
