@@ -8,20 +8,47 @@ import java.util.stream.Collectors;
 
 public class Main {
 
-    private static Integer[] root0 = new Integer[]{1, 2, 3, 4, 5, 6, 7};
+    private static Integer[] root0 = new Integer[]{1, 2, 3, null, null, 6, 7};
     private static Integer[] root1 = new Integer[]{1, 2, 3, 4};
     private static Integer[] root2 = new Integer[]{1, 2, 3, null, 4};
 
     public static void main(String[] args) {
-        Node<Integer> tree = createTree(root2);
+        Node<Integer> tree = createTree(root0);
+        String treeString = treeToString(tree);
+        System.out.printf("Бинарное дерево из этого массива при обходе его предварительным порядком в виде строки будет %s", treeString);
     }
 
-    private static <T> Node<T> createTree(T[] root) {
-        if (root == null
-                || root.length == 0
-                || root[0] == null) {
-            throw new IllegalArgumentException();
+    @NonNull
+    private static <T> String treeToString(@NonNull Node<T> node) {
+        StringBuilder resultCollector = new StringBuilder();
+        resultCollector
+                .append(node.getValue());
+        if (node.getLeftChild() != null) {
+            resultCollector.append("(")
+                    .append(treeToString(node.getLeftChild()))
+                    .append(")");
         }
+        if (node.getRightChild() != null) {
+            if (node.getLeftChild() == null) {
+                resultCollector.append("()");
+            }
+            resultCollector
+                    .append("(")
+                    .append(treeToString(node.getRightChild()))
+                    .append(")");
+        }
+        return resultCollector.toString();
+    }
+
+    /**
+     * Метод собирает бинарное дерево из массива "значений" узлов
+     *
+     * @param root массив значений узлов
+     * @param <T>  тип значения исходного массива и узла дерева
+     * @return {@link Node} корневой узел дерева
+     */
+    @NonNull
+    private static <T> Node<T> createTree(@NonNull T[] root) {
         Queue<Node<T>> nodeQueue = arrayToNodeQueue(root);
         Node<T> rootNode = nodeQueue.poll();
         if (rootNode == null) {
@@ -37,8 +64,10 @@ public class Main {
             }
             for (int i = 0; i < levelNodeList.size(); i++) {
                 Node<T> node = levelNodeList.get(i);
-                node.setLeftChild(nextLevelNodeList.get(i * 2));
-                node.setRightChild(nextLevelNodeList.get(i * 2 + 1));
+                if (node != null) {
+                    node.setLeftChild(nextLevelNodeList.get(i * 2));
+                    node.setRightChild(nextLevelNodeList.get(i * 2 + 1));
+                }
             }
             levelNodeList = nextLevelNodeList;
             horizontalLevel++;
@@ -66,18 +95,6 @@ public class Main {
 
     private static <T> Node<T> nodeFromValue(T value) {
         return value == null ? null : new Node<>(value);
-    }
-
-    private static <T> void setNodeChildrenFromQueue(@NonNull Node<T> node,
-                                                     @NonNull Queue<Node<T>> queue) {
-        node.setLeftChild(queue.poll());
-        node.setRightChild(queue.poll());
-//        if (node.getLeftChild() != null) {
-//            setNodeChildrenFromQueue(node.getLeftChild(), queue);
-//        }
-//        if (node.getRightChild() != null) {
-//            setNodeChildrenFromQueue(node.getRightChild(), queue);
-//        }
     }
 
 }
