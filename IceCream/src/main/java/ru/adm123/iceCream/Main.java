@@ -8,8 +8,10 @@ public class Main {
 
     private static int coins1 = 7;
     private static int coins2 = 0;
+    private static int coins3 = 20;
     private static int[] costs1 = new int[]{1, 3, 2, 4, 1};
     private static int[] costs2 = new int[]{10, 6, 8, 7, 7, 8};
+    private static int[] costs3 = new int[]{1, 6, 3, 1, 2, 5};
 
     public static void main(String[] args) {
         int iceCreamCount = getMaxIceCreamCount(coins1, costs1);
