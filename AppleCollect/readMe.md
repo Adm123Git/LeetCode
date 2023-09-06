@@ -24,6 +24,7 @@ https://leetcode.com/problems/minimum-time-to-collect-all-apples-in-a-tree/
 Примеры:
 
 ![img.png](imgTree1.png)
+
 Ввод:<br>
 n = 7,<br>
 edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]],<br>
@@ -34,6 +35,7 @@ hasApple = [false,false,true,false,true,true,false]
 ---
 
 ![img.png](imgTree2.png)
+
 Ввод:<br>
 n = 7,<br>
 edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]],<br>
