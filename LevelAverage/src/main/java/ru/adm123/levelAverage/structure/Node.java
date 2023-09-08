@@ -1,4 +1,4 @@
-package ru.adm123.treeString.structure;
+package ru.adm123.levelAverage.structure;
 
 import lombok.Getter;
 import lombok.NonNull;
