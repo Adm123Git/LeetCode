@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) {
         Node<Integer> tree = Node.from(root2);
         Float[] levelAverageArray = getLevelAverage(tree);
-        System.out.println(Arrays.toString(levelAverageArray));
+        System.out.println("Массив со средними узлов по уровням: " + Arrays.toString(levelAverageArray));
     }
 
     @NonNull
