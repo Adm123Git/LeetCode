@@ -1,0 +1,25 @@
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'io.freefair.lombok'
+apply plugin: 'io.spring.dependency-management'
+
+group 'ru.adm123'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+    testCompileOnly 'org.projectlombok:lombok'
+    testAnnotationProcessor 'org.projectlombok:lombok'
+}
+
+test {
+    useJUnitPlatform()
+    testLogging {
+        events "passed", "skipped", "failed"
+    }
+}
