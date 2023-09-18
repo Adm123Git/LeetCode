@@ -26,9 +26,9 @@ https://leetcode.com/problems/number-of-nodes-in-the-sub-tree-with-the-same-labe
 
 Ввод:
 ```
- n = 7
- edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]
- labels = "abaedcd"
+n = 7
+edges = [[0,1],[0,2],[1,4],[1,5],[2,3],[2,6]]
+labels = "abaedcd"
 ```
 Вывод:
 ```
