@@ -1,6 +1,6 @@
 # LeetCode
 
-Алгоритмические задачи с [LeetCode Community](t.me/Leetcode_fans)
+Алгоритмические задачи с [LeetCode Community](https://t.me/Leetcode_fans)
 
 ---
 
