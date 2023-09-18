@@ -8,9 +8,8 @@ public class Main {
     private static final String s2 = "   fly me   to   the moon  ";
 
     public static void main(String[] args) {
-
-        System.out.println(getLastWordLength(s1));
-
+        int lastWordLength = getLastWordLength(s1);
+        System.out.println("Длина последнего слова в заданной строке - " + lastWordLength + " символов");
     }
 
     private static int getLastWordLength(@NonNull String str) {
